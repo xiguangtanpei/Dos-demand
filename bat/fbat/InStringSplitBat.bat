@@ -39,5 +39,9 @@ if  "%Seation2%" == "" (
 @REM echo %Seation1%
 @REM echo %Seation2%
 
-endlocal & set "GLOBAL_VALUE_InStringSplitBat1=%Seation1%" & set "GLOBAL_VALUE_InStringSplitBat2=%Seation2%"
+endlocal & (
+set "GLOBAL_VALUE_InStringSplitBat1=%Seation1%" 
+set "GLOBAL_VALUE_InStringSplitBat2=%Seation2%"
+
+) 
 
