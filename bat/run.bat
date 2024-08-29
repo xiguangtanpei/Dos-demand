@@ -148,7 +148,6 @@ rem 查找某个进程是否开启  有全字符串   返回 true 和 false
 @REM rem  如果返回的类型没有 返回nul 
 
 
-
 rem  想注册表写入特定数据 函数是先 特定位置来写 位置固定 可以写一些key value 进行后续访问处理设置 
 
 
@@ -159,6 +158,13 @@ rem  删除掉 自定义 注册表的 key 数据
 
 
 rem 读写 配置文件 key = value 方式通过key 访问对应value 数据--做默认支持   
+set "test1=E:\D\github\dos_demand\bat\keyvalue.txt"
+call fbat/GetFileKeyValueBat.bat %test1%  "inf"
+echo  !GLOBAL_VALUE_GetFileKeyValueBat!
+rem   nul 
+call fbat/GetFileKeyValueBat.bat %test1%  "info"
+echo  !GLOBAL_VALUE_GetFileKeyValueBat!
+rem  45  读写文件 ok  
 
 
 rem  读写配置文件 通过 key***vaue 形式 通过key 返回value 数据形式--做默认支持 
