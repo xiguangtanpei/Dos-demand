@@ -100,10 +100,11 @@ rem  bat 截取字符的后半段数据
 
 
 
-rem 查找某个进程是否开启  有全字符串 和 模糊查找两种形式  返回nul 和进程名称 
-@REM tasklist
-
-
+rem 查找某个进程是否开启  有全字符串   返回 true 和 false 
+@REM tasklist 测试成功  
+@REM call fbat/GetTaskListValueBat.bat  "UE4Editor-Win64-Debug.exe"
+@REM echo  %GLOBAL_VALUE_GetTaskListValueBat%
+ 
 
 rem  对于某个进程杀死，比如操作运行前杀死某个进程 taskkill /imn  xxx.exe 
 
