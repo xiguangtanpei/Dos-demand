@@ -81,7 +81,11 @@ rem  bat 截取字符的后半段数据
 @REM rem 匹配结果验证成功 
 
 
-
+@REM rem  字符串大小写字母转换 过程 
+@REM set "test1=E:\D\github\dos_demand\bat"
+@REM call fbat/InStringUpLowBat.bat  %test1%  0 
+@REM echo  %GLOBAL_VALUE_InStringUpLowBat%
+@REM rem  E:\D\GITHUB\DOS_DEMAND\BAT   e:\d\github\dos_demand\bat 大小写转换成功  
 
 
 
