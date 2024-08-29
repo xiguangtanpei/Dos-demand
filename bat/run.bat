@@ -117,9 +117,20 @@ rem 查找某个进程是否开启  有全字符串   返回 true 和 false
 
 
 
+@REM rem  对于传入路径确定是否是存在文件夹 
+@REM set "test1=F:\LetsGoDevelop_ft_tools/LetsGo"
+@REM call fbat/InStringIsDirBat.bat %test1%
+@REM rem  true  验证ok 
+@REM echo %GLOBAL_VALUE_InStringIsDirBat%
 
 
-rem  返回文件夹下的文件名称已字符串链接返回 
+@REM rem  对于传入的路径判断是否是 具体文件  
+@REM set "test1=F:\LetsGoDevelop_ft_tools/LetsGo/LetsGo.sln"
+@REM call fbat/InStringIsFileBat.bat %test1%
+@REM rem  true  验证ok 
+@REM echo %GLOBAL_VALUE_InStringIsFileBat%
+
+
 
 rem  确定给定目录是否有某个文件夹名称   
 
