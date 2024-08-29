@@ -139,10 +139,15 @@ rem 查找某个进程是否开启  有全字符串   返回 true 和 false
 @REM echo %GLOBAL_VALUE_InStringHaveNameBat%
 
 
+@REM rem  确定给定目录下面  筛选出阿里特定文件类返回到变量 给到字符串变量返回  
+@REM rem  返回文件类型类型 .bat  .txt 这种 最后返回到一个变量中 使用需要切割在 
+@REM set "test1=F:\LetsGoDevelop_ft_tools\LetsGo"
+@REM call  fbat/GetDirFileTypeBat.bat  %test1%  ".sh" 
+@REM echo  %GLOBAL_VALUE_GetDirFileTypeBat%
+@REM rem  返回类型  ConnectShareDDC.sh;DisConnectShareDDC.sh;MakeLinkForExportDir.sh;resourcecheck.sh; 
+@REM rem  如果返回的类型没有 返回nul 
 
 
-
-rem  确定给定目录下面  筛选出阿里特定文件类返回到变量 给到字符串变量返回  
 
 rem  想注册表写入特定数据 函数是先 特定位置来写 位置固定 可以写一些key value 进行后续访问处理设置 
 
