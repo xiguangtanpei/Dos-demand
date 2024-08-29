@@ -131,11 +131,15 @@ rem 查找某个进程是否开启  有全字符串   返回 true 和 false
 @REM echo %GLOBAL_VALUE_InStringIsFileBat%
 
 
+@REM rem  确定给定目录是否有某个文件夹名称   
+@REM rem  确定给定目录下有没有对应 文件名称   
+@REM set "test1=F:\LetsGoDevelop_ft_tools\LetsGo"
+@REM call  fbat/InStringHaveNameBat.bat  %test1%  "LetsGoScript.code-workspace" 
+@REM call  fbat/InStringHaveNameBat.bat  %test1%  "LetsGo.sln" 
+@REM echo %GLOBAL_VALUE_InStringHaveNameBat%
 
-rem  确定给定目录是否有某个文件夹名称   
 
 
-rem  确定给定目录下有没有对应 文件名称   
 
 
 rem  确定给定目录下面  筛选出阿里特定文件类返回到变量 给到字符串变量返回  
