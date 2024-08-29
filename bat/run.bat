@@ -54,14 +54,31 @@ setlocal enabledelayedexpansion
 
 @REM rem 字符串截取 从0 开始 类似于python的处理  
 @REM set "test1=E:\D\github\dos_demand\bat"
-@REM @REM call fbat/InStringSectionBat.bat  %test1% "0" "6"
-@REM @REM rem github 从 5 开始 向后截取6个 
-@REM @REM call fbat/InStringSectionBat.bat  %test1% "0" "-3"
-@REM rem E:\D\github\dos_demand\ 从第一个到 导数 3给数据
-@REM @REM call fbat/InStringSectionBat.bat  %test1% "-3" "3"
-@REM rem  bat 截取字符的后半段数据 
+@REM call fbat/InStringSectionBat.bat  !test1! "0" "6"
+@REM echo  %GLOBAL_VALUE_InStringSectionBat%
+@REM rem github 从 5 开始 向后截取6个 
+@REM call fbat/InStringSectionBat.bat  %test1% "0" "-3"
+rem E:\D\github\dos_demand\ 从第一个到 导数 3给数据
+@REM call fbat/InStringSectionBat.bat  %test1% "-3" "3"
+rem  bat 截取字符的后半段数据 
 
 
+@REM rem 字符串数量获取长度 
+@REM set "test1=E:\D\github\dos_demand\bat"
+@REM @REM set "test1=3"
+@REM call  fbat/InStringLenBat.bat  %test1%
+@REM echo  !GLOBAL_VALUE_InStringLenBat!
+@REM rem  计算长度返回正确
+
+
+
+@REM @REM rem  查看字符串匹配情况   第三项 0是 结果匹配   1 开头匹配   返回 true 和 false 
+@REM set "test1=E:\D\github\dos_demand\bat"
+@REM set   "Bat=bat" 
+@REM rem  这里是区分大小写的 字符串匹配 
+@REM call fbat/InStringEndWithBat.bat  %test1%  %Bat%  1
+@REM echo %GLOBAL_VALUE_InStringEndWithBat%
+@REM rem 匹配结果验证成功 
 
 
 
