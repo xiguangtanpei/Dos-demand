@@ -106,7 +106,17 @@ rem 查找某个进程是否开启  有全字符串   返回 true 和 false
 @REM echo  %GLOBAL_VALUE_GetTaskListValueBat%
  
 
-rem  对于某个进程杀死，比如操作运行前杀死某个进程 taskkill /imn  xxx.exe 
+
+@REM rem  对于某个进程杀死，比如操作运行前杀死某个进程 taskkill /imn  xxx.exe 
+@REM call fbat/GetTaskListValueBat.bat  "UE4Editor-Win64-Debug.exe"
+@REM @REM echo  !GLOBAL_VALUE_GetTaskListValueBat! 
+@REM if "!GLOBAL_VALUE_GetTaskListValueBat!" == "true" (
+@REM     call fbat/KillTaskListValueBat.bat   "UE4Editor-Win64-Debug.exe"  "1"
+@REM     echo !GLOBAL_VALUE_KillTaskListValueBat!
+@REM )
+
+
+
 
 
 rem  返回文件夹下的文件名称已字符串链接返回 

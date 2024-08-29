@@ -2,7 +2,7 @@
 chcp 65001>nul 
 rem  用于向前进程是否开启  传入进程名称   返回 true  没有返回false 
 setlocal EnableDelayedExpansion 
-rem  Flag  0 模糊判断  1 精确判断  
+
 set "TaskName=%~1"
 
 set  "result=false"
