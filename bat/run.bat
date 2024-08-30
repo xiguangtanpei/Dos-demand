@@ -108,10 +108,10 @@ rem 查找某个进程是否开启  有全字符串   返回 true 和 false
 
 
 @REM rem  对于某个进程杀死，比如操作运行前杀死某个进程 taskkill /imn  xxx.exe 
-@REM call fbat/GetTaskListValueBat.bat  "UE4Editor-Win64-Debug.exe"
+@REM call fbat/GetTaskListValueBat.bat  "UE4Editor.exe"
 @REM @REM echo  !GLOBAL_VALUE_GetTaskListValueBat! 
 @REM if "!GLOBAL_VALUE_GetTaskListValueBat!" == "true" (
-@REM     call fbat/KillTaskListValueBat.bat   "UE4Editor-Win64-Debug.exe"  "1"
+@REM     call fbat/KillTaskListValueBat.bat   "UE4Editor.exe"  "1"
 @REM     echo !GLOBAL_VALUE_KillTaskListValueBat!
 @REM )
 
@@ -184,17 +184,38 @@ rem 最后flag 是 1 的时候 配置形式 key***value 返回两段数据
 
 
 
+@REM rem 对于字符串 "1 2 3 4 5" 反向 "5 4 3 2 1"
+@REM call fbat/InStringSectionSwapBat.bat  "1 2 3 4 5"
+@REM echo %GLOBAL_VALUE_InStringSectionSwapBat%
+@REM rem  5 4 3 2 1  
+@REM call fbat/InStringSectionSwapBat.bat  "p  tai  banse "
+@REM echo %GLOBAL_VALUE_InStringSectionSwapBat%
+@REM rem banse tai p  
 
-rem   返回路径的最后一段  看是否是window风格的操作    
 
 
-rem   文件向前 返回多少段数据 
+@REM rem   返回路径的最后一段  看是否是window风格的操作    
+@REM rem   首先判断是不是路径  在看路径情况  0 window 风格 1 其他风格 然后
+@REM rem   开始设置0 window的风格
+@REM set "test1=E:\D\github\dos_demand\bat\\///\\\xing.txt"
+@REM call fbat/InStringGetPathSectionBat.bat %test1% "1" "1" "1" 
+@REM rem  "0" "5" "1"  = D\github\dos_demand\bat\xing.txt :: 0 是window风格  5 采用 5段  1从 后到前 
+@REM rem  "0" "5" "0"  = E:\D\github\dos_demand\bat :: 0 window风格  5 采用5段   0 从前到后 
+@REM rem  "0" "20" "0"  = E:\D\github\dos_demand\bat\xing.txt  设置成20 超过后 还是显示原来的路径 
+@REM rem  "1" "20" "0"  = E:/D/github/dos_demand/bat/xing.txt  1 不是window风格  20 超出使用原来字段  0是 从前到后 
+@REM rem  "1" "1" "1"  =  xing.txt  显示最后一段数据 
+@REM echo !GLOBAL_VALUE_InStringGetPathSectionBat!
+
+
+
+
+rem 对于输入数据进行交互处理 默认遵循dos 空格处理 
+
 
 rem   对于文件下 特定类型 加入前缀 后缀  vvv
 
 @REM arp -a 
  
-
 
 
 
