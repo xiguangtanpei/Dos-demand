@@ -207,15 +207,14 @@ rem 最后flag 是 1 的时候 配置形式 key***value 返回两段数据
 @REM echo !GLOBAL_VALUE_InStringGetPathSectionBat!
 
 
+@REM rem  文件从a目录迁移大b 目录 
+@REM rem  这里迁移路径不挑符号 不管是那张路径符号都可以迁移的 迁移
+@REM rem  !!!!!! 迁移文件 少用  --- 最后会返回成功和失败 
+@REM set  "source_file=S:\DCC\sp\bba\\caodie.xml"
+@REM set   "des_file=E:\D\github\\dos_demand\\//bat\/caodie.xml"
+@REM call  fbat/MoveFileBat.bat  !source_file!  !des_file!
+@REM echo  %GLOBAL_VALUE_MoveFileBat%
 
-
-rem 对于输入数据进行交互处理 默认遵循dos 空格处理 
-
-
-rem   对于文件下 特定类型 加入前缀 后缀  vvv
-
-@REM arp -a 
- 
 
 
 
