@@ -158,22 +158,34 @@ rem  删除掉 自定义 注册表的 key 数据
 
 
 rem 读写 配置文件 key = value 方式通过key 访问对应value 数据--做默认支持   
-set "test1=E:\D\github\dos_demand\bat\keyvalue.txt"
-call fbat/GetFileKeyValueBat.bat %test1%  "inf"
-echo  !GLOBAL_VALUE_GetFileKeyValueBat!
-rem   nul 
-call fbat/GetFileKeyValueBat.bat %test1%  "info"
-echo  !GLOBAL_VALUE_GetFileKeyValueBat!
-rem  45  读写文件 ok  
+@REM set "test1=E:\D\github\dos_demand\bat\keyvalue.txt"
+@REM call fbat/GetFileKeyValueBat.bat %test1%  "inf" "0"
+@REM echo  !GLOBAL_VALUE_GetFileKeyValueBat!
+@REM rem   nul 
+@REM call fbat/GetFileKeyValueBat.bat %test1%  "info" "0"
+@REM echo  !GLOBAL_VALUE_GetFileKeyValueBat!
+@REM rem  45  读写文件 ok  
+
+rem 最后flag 是 1 的时候 配置形式 key***value 返回两段数据
+@REM set "test1=E:\D\github\dos_demand\bat\xing.txt"
+@REM call fbat/GetFileKeyValueBat.bat %test1%  "info" "1"
+@REM echo  !GLOBAL_VALUE_GetFileKeyValueBat!
 
 
-rem  读写配置文件 通过 key***vaue 形式 通过key 返回value 数据形式--做默认支持 
+
+@REM rem   标准化路径名称 是否是window 风格名称还是其他  
+@REM set "test1=E:\D\github\dos_demand\bat\\///\\\xing.txt"
+@REM call fbat/InStringIsWindowFlagBat.bat  %test1%  "0"
+@REM echo  !GLOBAL_VALUE_InStringIsWindowFlagBat!
+@REM rem  E:\D\github\dos_demand\bat\xing.txt 
+@REM call fbat/InStringIsWindowFlagBat.bat  %test1%  "1"
+@REM echo  !GLOBAL_VALUE_InStringIsWindowFlagBat!
+@REM rem   E:/D/github/dos_demand/bat/xing.txt 
 
 
-rem   标准化路径名称 是否是window 风格名称还是其他  
 
 
-rem   返回路径的最后一段   看是否是window风格的操作    
+rem   返回路径的最后一段  看是否是window风格的操作    
 
 
 rem   文件向前 返回多少段数据 
