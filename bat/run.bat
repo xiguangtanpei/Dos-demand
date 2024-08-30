@@ -216,7 +216,12 @@ rem 最后flag 是 1 的时候 配置形式 key***value 返回两段数据
 @REM echo  %GLOBAL_VALUE_MoveFileBat%
 
 
-
+@REM rem 文件从 A 拷贝到B位置 
+@REM set  "source_file=S:\DCC///\\\\sp\bba\\caodie.xml"
+@REM set   "des_file=E:\D\github//\\\dos_demand\bat\\caodie.xml"
+@REM call fbat/CopyFileBat.bat  !source_file!  !des_file!
+@REM echo !GLOBAL_VALUE_CopyFileBat!
+@REM rem  true false 来表示是否拷贝成功 
 
 
 
