@@ -9,14 +9,22 @@ set  "Token=%~2"
 set  "IsLeft=%~3" 
 
 rem 拆分前需要去点
+rem 有bug 第一次测试传入 F:\LetsGoDevelop_ft_tools\LetsGo\Content\Feature\StarP   利用 Content  切割出现问题 
+rem 在切割中 delims 每次知识切割一个字符串 所以需要点替换在切割 
 
 set "Seation1="
 set "Seation2="
+@REM echo 验证输入 !InString!
+@REM echo 验证token !Token!
 
-for /f "tokens=1* delims=%Token%" %%a in ("%InString%") do (
+call  set  "result=%%InString:%Token%=|%%"
+for /f "tokens=1* delims=|" %%a in ("%result%") do (
 
     set  "Seation1=%%a"
     set  "Seation2=%%b"
+
+    @REM echo 验证切割1 !Seation1!
+    @REM echo 验证切割2 !Seation2!
 )
 
 
