@@ -8,10 +8,6 @@ set "InString=%~1"
 set  "Token=%~2"
 set  "IsLeft=%~3" 
 
-rem 拆分前需要去点
-rem 有bug 第一次测试传入 F:\LetsGoDevelop_ft_tools\LetsGo\Content\Feature\StarP   利用 Content  切割出现问题 
-rem 在切割中 delims 每次知识切割一个字符串 所以需要点替换在切割 
-
 set "Seation1="
 set "Seation2="
 @REM echo 验证输入 !InString!
