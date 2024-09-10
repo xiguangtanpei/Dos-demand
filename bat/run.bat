@@ -225,7 +225,13 @@ rem 最后flag 是 1 的时候 配置形式 key***value 返回两段数据
 
 
 
+rem 创建一个链接 aaa 原来存在文件   bbb是要到的位置
+@REM set "aaa=V:\A\Work\sp\tem\Feature"
+@REM set  "bbb=V:\C\AILabExport"
 
+@REM call fbat/CreateMklinkBat.bat   "%aaa%"  "%bbb%" 
+
+@REM echo  %GLOBAL_VALUE_CreateMkLinkBat% 
 
 
 

@@ -6,7 +6,7 @@ rem  设置文件时只读模式  注意确保如果是文件
 set "InStringFile=%~1"
 set  "result=false"
 
-echo 打印输入:  %InStringFile%
+rem echo 打印输入:  %InStringFile%
 
 if exist "%InStringFile%" (
     if exist "%InStringFile%\.\" (

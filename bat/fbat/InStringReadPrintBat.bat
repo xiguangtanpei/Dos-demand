@@ -4,8 +4,9 @@ setlocal EnableDelayedExpansion
 rem  print all in file connet  in ugit cmd 
 
 rem 文件不在返回false 文件在读文件每行跳转 空格 换成 - 进行打印 for循环call使用
-
+rem  InFlagOnoff false output no -    set  true  output  - 
 set "InFlagFile=%~1"
+set  "InFlagOnoff=%~2"
 set  "FlagToken=nul"
 set  "TemCharToken="
 
@@ -23,7 +24,9 @@ if  "%result%" == "true" (
     for /f  "tokens=1 delims=" %%a in  (%InFlagFile%) do (
         rem this string bat chat 
         set  "TemCharToken=%%a"
-        call :make_string_chars 
+        if  "!InFlagOnoff!" == "true" (
+             call :make_string_chars 
+        )
         echo !TemCharToken!
     )
 )
