@@ -25,7 +25,7 @@ if exist !MkLinkPath! (
     rmdir /s /q   !MkLinkPath!
 )
 
-mklink /d  !MkLinkPath! !InputSource!
+mklink /d  !MkLinkPath! !InputSource! > nul 
 
 if  "%errorlevel%" =="0" (
     set "result=true"
